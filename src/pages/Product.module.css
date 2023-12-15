@@ -32,3 +32,32 @@
 .product section a {
   margin-top: 2rem;
 }
+
+/* Mobile responsiveness */
+@media screen and (max-width: 567px) {
+  .product {
+    margin: 1.5rem;
+    padding: 2.5rem;
+  }
+
+  .product section {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+  .product img {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .product h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .product p {
+    font-size: 1.5rem;
+  }
+}
