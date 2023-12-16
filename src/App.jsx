@@ -2,6 +2,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Product from './pages/Product';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
+import PageNotFound from './pages/PageNotFound';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="product" element={<Product />} />
         <Route path="product" element={<Product />} />
+        <Route path="*" element={<PageNotFound />} />
+        <Route path="pricing" element={<Pricing />} />
       </Routes>
     </BrowserRouter>
   );
