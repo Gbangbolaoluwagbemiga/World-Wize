@@ -1,9 +1,10 @@
-import styles from "./Homepage.module.css";
+import styles from './Homepage.module.css';
 
 export default function Homepage() {
   return (
     <main className={styles.homepage}>
       <section>
+        {' '}
         <h1>
           You travel the world.
           <br />
