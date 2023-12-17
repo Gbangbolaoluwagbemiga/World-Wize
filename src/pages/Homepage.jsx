@@ -1,4 +1,3 @@
-import PageNav from '../components/PageNav';
 import styles from './Homepage.module.css';
 
 export default function Homepage() {
@@ -7,7 +6,6 @@ export default function Homepage() {
       <section>
         <h1>
           You travel the world.
-          <PageNav />
           <br />
           WorldWise keeps track of your adventures.
         </h1>

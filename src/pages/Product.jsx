@@ -1,5 +1,4 @@
 import styles from './Product.module.css';
-import PageNav from '../components/PageNav';
 
 export default function Product() {
   return (
@@ -10,7 +9,6 @@ export default function Product() {
           alt="person with dog overlooking mountain with sunset"
         />
         <div>
-          <PageNav />
           <h2>About WorldWide.</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
