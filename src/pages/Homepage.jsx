@@ -5,9 +5,9 @@ export default function Homepage() {
   return (
     <main className={styles.homepage}>
       <section>
-        <PageNav />
         <h1>
           You travel the world.
+          <PageNav />
           <br />
           WorldWise keeps track of your adventures.
         </h1>

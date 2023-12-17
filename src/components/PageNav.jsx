@@ -11,10 +11,10 @@ function PageNav() {
           <NavLink to={'/product'}>Product</NavLink>
         </li>
         <li>
-          <NavLink to={'/pricing'}>Pricing</NavLink>
+          <NavLink to={'/login'}>Login</NavLink>
         </li>
         <li>
-          <NavLink to={'/pricing'}>Pricing</NavLink>
+          <NavLink to={'*'}>PageNotFound</NavLink>
         </li>
       </ul>
     </nav>
