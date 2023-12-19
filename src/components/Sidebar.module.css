@@ -17,3 +17,5 @@
   font-size: 1.2rem;
   color: var(--color-light--1);
 }
+@media screen and (max-width: 567px) {
+}
