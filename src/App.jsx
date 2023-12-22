@@ -1,4 +1,5 @@
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {useEffect, useState} from 'react';
 import Product from './pages/Product';
 import Homepage from './pages/Homepage';
 import Login from './pages/Login';
@@ -7,14 +8,17 @@ import Pricing from './pages/Pricing';
 import AppLayout from './pages/AppLayout';
 import City from './components/City';
 import CountryItem from './components/CountryItem';
-import {useEffect, useState} from 'react';
+import {Data} from '../data/cities';
 
 function App() {
-  const [cities, setCities] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [cities, setCities] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
+  console.log(cities);
 
   useEffect(function () {
-    const data = setCities(prev => [...prev, data]);
+    const data = Data;
+
+    setCities(prev => [...prev, data]);
   }, []);
 
   return (

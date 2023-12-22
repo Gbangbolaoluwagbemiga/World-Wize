@@ -1,4 +1,4 @@
-export const cities = [
+export const Data = [
   {
     cityName: 'Lisbon',
     country: 'Portugal',
