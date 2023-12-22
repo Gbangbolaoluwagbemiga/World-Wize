@@ -5,8 +5,18 @@ import Login from './pages/Login';
 import PageNotFound from './pages/PageNotFound';
 import Pricing from './pages/Pricing';
 import AppLayout from './pages/AppLayout';
+import City from './components/City';
+import CountryItem from './components/CountryItem';
+import {useEffect, useState} from 'react';
 
 function App() {
+  const [cities, setCities] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(function () {
+    const data = setCities(prev => [...prev, data]);
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -17,8 +27,8 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="appLayout" element={<AppLayout />}>
-          <Route path="cities" element={<p>List of cities</p>} />
-          <Route path="countries" element={<p>My countries</p>} />
+          <Route path="cities" element={<City />} />
+          <Route path="countries" element={<CountryItem />} />
           <Route path="form" element={<p>Form</p>} />
         </Route>
         <Route path="pricing" element={<Pricing />} />
