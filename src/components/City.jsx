@@ -8,7 +8,8 @@ const formatDate = date =>
     weekday: 'long',
   }).format(new Date(date));
 
-function City() {
+function City({cities}) {
+  console.log(cities[0]);
   // TEMP DATA
   const currentCity = {
     cityName: 'Lisbon',
@@ -50,6 +51,9 @@ function City() {
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
+      {cities.map(city => (
+        <p key={city.id}>{city}</p>
+      ))}
 
       <div>{/* <ButtonBack /> */}</div>
     </div>

@@ -13,7 +13,7 @@ import {Data} from '../data/cities';
 function App() {
   const [cities, setCities] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
-  console.log(cities);
+  // console.log(cities);
 
   useEffect(function () {
     const data = Data;
@@ -31,8 +31,8 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="appLayout" element={<AppLayout />}>
-          <Route path="cities" element={<City />} />
-          <Route path="countries" element={<CountryItem />} />
+          <Route path="cities" element={<City cities={cities} />} />
+          <Route path="countries" element={<CountryItem cities={cities} />} />
           <Route path="form" element={<p>Form</p>} />
         </Route>
         <Route path="pricing" element={<Pricing />} />
