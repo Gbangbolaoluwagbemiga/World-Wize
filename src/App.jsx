@@ -12,13 +12,12 @@ import {Data} from '../data/cities';
 
 function App() {
   const [cities, setCities] = useState([]);
+
+  const {Cities} = Data;
   // const [isLoading, setIsLoading] = useState(true);
-  console.log(cities);
 
   useEffect(function () {
-    const data = Data;
-
-    setCities(data);
+    setCities(Cities);
   }, []);
 
   return (
