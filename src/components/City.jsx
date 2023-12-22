@@ -16,6 +16,7 @@ function City({cities}) {
   //   date: '2027-10-31T15:59:59.138Z',
   //   notes: 'My favorite city so far!',
   // };
+  console.log(cities);
 
   // const {cityName, emoji, date, notes} = currentCity;
   return (
