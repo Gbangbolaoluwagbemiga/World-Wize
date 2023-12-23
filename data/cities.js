@@ -14,7 +14,7 @@ export const Data = {
     },
     {
       cityName: 'Madrid',
-      country: 'Spain',
+      country: 'portugal',
       emoji: '🇪🇸',
       date: '2027-07-15T08:22:53.976Z',
       notes: '',
