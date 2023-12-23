@@ -18,7 +18,7 @@ export default function Homepage() {
           you have wandered the world.
         </h2>
 
-        <Link to="/app" className="cta">
+        <Link to="appLayout" className="cta">
           Start tracking now
         </Link>
       </section>
