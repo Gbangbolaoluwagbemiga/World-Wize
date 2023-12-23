@@ -4,7 +4,7 @@ import CountryItem from './CountryItem';
 function CountryList({cities}) {
   const countries = cities.reduce((arr, countries) => {
     if (!arr.map(el => el.country).includes(countries.country))
-      return [...arr, {country: countries.country}];
+      return [...arr, {country: countries.country, emoji: countries.emoji}];
     else return arr;
   }, []);
   return (
