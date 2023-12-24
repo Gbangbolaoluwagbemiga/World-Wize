@@ -1,3 +1,4 @@
+import {useParams} from 'react-router-dom';
 import styles from './City.module.css';
 function City() {
   // TEMP DATA
@@ -7,7 +8,8 @@ function City() {
     date: '2027-10-31T15:59:59.138Z',
     notes: 'My favorite city so far!',
   };
-
+  const X = useParams();
+  console.log(X);
   const {emoji, cityName, date, notes} = currentCity;
   // return <p>HIIIIIIII</p>;
 
