@@ -10,7 +10,7 @@ import City from './components/City';
 import CountryList from './components/CountryList';
 import {Data} from '../data/cities';
 import CityList from './components/CityList';
-// import CityItem from './components/CityItem';
+import Form from './components/Form';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -35,7 +35,7 @@ function App() {
           <Route path="cities" element={<CityList cities={cities} />} />
           <Route path="cities/:id" element={<City />} />
           <Route path="countries" element={<CountryList cities={cities} />} />
-          <Route path="form" element={<p>Form</p>} />
+          <Route path="form" element={<Form />} />
         </Route>
         <Route path="pricing" element={<Pricing />} />
       </Routes>
