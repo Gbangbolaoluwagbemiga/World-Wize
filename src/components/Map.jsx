@@ -10,7 +10,7 @@ function Map() {
     <div className={styles.mapContainer}>
       <h1>Hello</h1>
       <p>{lat}</p>
-      <p onClick={() => setSearchParams({id: 245})}>{lng}</p>
+      <p onClick={() => setSearchParams({lat: 245})}>{lng}</p>
     </div>
   );
 }
