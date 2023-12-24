@@ -1,7 +1,18 @@
+import {useParams, useSearchParams} from 'react-router-dom';
 import styles from './Map.module.css';
 
 function Map() {
-  return <div className={styles.mapContainer}></div>;
+  const [searchParams, setSearchParams] = useSearchParams();
+  const lat = searchParams.get('lat');
+  const lng = searchParams.get('lng');
+
+  return (
+    <div className={styles.mapContainer}>
+      <h1>Hello</h1>
+      <p>{lat}</p>
+      <p onClick={() => setSearchParams({id: 245})}>{lng}</p>
+    </div>
+  );
 }
 
 export default Map;
