@@ -1,4 +1,4 @@
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Navigate} from 'react-router-dom';
 import {useEffect, useState} from 'react';
 import Product from './pages/Product';
 import Homepage from './pages/Homepage';
@@ -32,6 +32,7 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="appLayout" element={<AppLayout />}>
+          <Route index element={<Navigate to="cities" />} />
           <Route path="cities" element={<CityList cities={cities} />} />
           <Route path="cities/:id" element={<City />} />
           <Route path="countries" element={<CountryList cities={cities} />} />
