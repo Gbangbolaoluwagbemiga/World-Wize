@@ -42,3 +42,12 @@
   font-family: inherit;
   font-size: 1.2rem;
 }
+
+@media screen and (max-width: 567px) {
+  .form {
+    padding: 1.25rem;
+  }
+  .flag {
+    font-size: 1.5rem;
+  }
+}
