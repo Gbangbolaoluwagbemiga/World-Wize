@@ -50,12 +50,8 @@ function Form() {
 
       <div className={styles.buttons}>
         <Button
-          onClick={e => {
+          onclick={e => {
             e.preventDefault();
-            e.preventDefault();
-
-            console.log('hiii');
-            navigate(-1);
           }}
           type={'primary'}
         >
@@ -65,8 +61,8 @@ function Form() {
         <Button
           type={'back'}
           onclick={e => {
-            // e.preventDefault();
-            console.log('meee');
+            e.preventDefault();
+            navigate(-1);
           }}
         >
           &larr; Back
