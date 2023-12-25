@@ -32,7 +32,7 @@ function App() {
         <Route path="product" element={<Product />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="appLayout" element={<AppLayout />}>
-          <Route index element={<Navigate to="cities" />} />
+          <Route index element={<Navigate replace to="cities" />} />
           <Route path="cities" element={<CityList cities={cities} />} />
           <Route path="cities/:id" element={<City />} />
           <Route path="countries" element={<CountryList cities={cities} />} />
