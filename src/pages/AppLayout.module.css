@@ -4,4 +4,12 @@
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 567px) {
+  .app {
+    padding: 1.25rem;
+    display: flex;
+  }
 }
