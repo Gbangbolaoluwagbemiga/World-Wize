@@ -60,4 +60,12 @@
   .product p {
     font-size: 1.5rem;
   }
+
+  .product h2 {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
 }

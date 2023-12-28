@@ -9,11 +9,11 @@ function PageNav() {
 
     // </nav>
 
-    <nav className={`navbar navbar-expand-lg ${styles.nav}`}>
-      <div className="container-fluid">
+    <nav className={`navbar navbar-expand-lg  ${styles.nav}`}>
+      <div className="container-fluid mb-3">
         <Logo />
         <button
-          className="navbar-toggler hamburger"
+          className={`navbar-toggler ${styles.hamburger}`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -25,7 +25,7 @@ function PageNav() {
         </button>
         <div className="collapse navbar-collapse ms-md-auto" id="navbarNav">
           <ul className="navbar-nav ms-md-auto mb-2 mb-lg-0">
-            <li className="nav-item ">
+            <li className="nav-item mt-4">
               <NavLink to={'/pricing'}>Pricing</NavLink>
             </li>
             <li className="nav-item ">

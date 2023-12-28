@@ -39,7 +39,9 @@ a.ctaLink:visited {
   .nav {
     display: inline;
   }
-
+  .navbar {
+    margin-bottom: 1.5rem;
+  }
   .nav li {
     margin-bottom: 1.75rem;
   }
@@ -55,8 +57,9 @@ a.ctaLink:visited {
   }
 
   .hamburger {
-    font-size: 0.75rem;
-    border: none;
+    font-size: 1rem;
+    border: 2px solid white;
+    background-color: white;
   }
   .hamburger:focus {
     outline: none;
