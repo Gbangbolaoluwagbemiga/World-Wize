@@ -1,5 +1,6 @@
 import {createContext, useContext, useEffect, useState} from 'react';
-import {Data} from '.../';
+import Data from '../data/cities';
+console.log(Data);
 
 const CitiesContext = createContext();
 
