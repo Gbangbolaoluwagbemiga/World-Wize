@@ -7,8 +7,9 @@
 .nav ul {
   list-style: none;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  gap: 7rem;
 }
 
 .nav a:link,
@@ -36,7 +37,11 @@ a.ctaLink:visited {
 @media screen and (max-width: 567px) {
   .nav ul,
   .nav {
-    gap: 1rem;
+    display: inline;
+  }
+
+  .nav li {
+    margin: 1.75rem 0;
   }
 
   .nav a:link,
@@ -47,5 +52,14 @@ a.ctaLink:visited {
   a.ctaLink:link,
   a.ctaLink:visited {
     padding: 1rem;
+  }
+
+  .hamburger {
+    font-size: 0.75rem;
+    border: none;
+  }
+  .hamburger:focus {
+    outline: none;
+    box-shadow: 0 0 5px none;
   }
 }
