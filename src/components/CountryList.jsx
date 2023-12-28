@@ -1,7 +1,10 @@
 import styles from './CountryList.module.css';
 import CountryItem from './CountryItem';
+import {UseCities} from '../context/CitiesContext';
 
-function CountryList({cities}) {
+function CountryList() {
+  const {cities} = UseCities();
+
   const countries = cities.reduce((arr, countries) => {
     if (!arr.map(el => el.country).includes(countries.country))
       return [...arr, {country: countries.country, emoji: countries.emoji}];
