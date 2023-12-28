@@ -3,7 +3,7 @@ import Logo from './Logo';
 import AppNav from './AppNav';
 import {Outlet} from 'react-router-dom';
 
-function sideBar() {
+function SideBar() {
   return (
     <div className={styles.sidebar}>
       <Logo />
@@ -20,4 +20,4 @@ function sideBar() {
   );
 }
 
-export default sideBar;
+export default SideBar;
