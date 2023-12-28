@@ -8,20 +8,10 @@ import Pricing from './pages/Pricing';
 import AppLayout from './pages/AppLayout';
 import City from './components/City';
 import CountryList from './components/CountryList';
-import {Data} from '../data/cities';
 import CityList from './components/CityList';
 import Form from './components/Form';
 
 function App() {
-  const [cities, setCities] = useState([]);
-
-  const {Cities} = Data;
-  // const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(function () {
-    setCities(Cities);
-  }, []);
-
   return (
     <BrowserRouter>
       <Routes>
