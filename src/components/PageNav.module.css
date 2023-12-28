@@ -41,7 +41,7 @@ a.ctaLink:visited {
   }
 
   .nav li {
-    margin: 1.75rem 0;
+    margin-bottom: 1.75rem;
   }
 
   .nav a:link,
@@ -61,5 +61,8 @@ a.ctaLink:visited {
   .hamburger:focus {
     outline: none;
     box-shadow: 0 0 5px none;
+  }
+  a.ctaLink:link {
+    padding: 0.4rem 1rem;
   }
 }
