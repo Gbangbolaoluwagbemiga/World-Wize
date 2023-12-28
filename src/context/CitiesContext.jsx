@@ -1,5 +1,5 @@
 import {createContext, useContext, useEffect, useState} from 'react';
-import {Data} from '../data/cities';
+import {Data} from '.../';
 
 const CitiesContext = createContext();
 
