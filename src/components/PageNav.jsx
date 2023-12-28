@@ -4,13 +4,8 @@ import Logo from './Logo';
 
 function PageNav() {
   return (
-    // <nav className={styles.nav}>
-    //   <Logo />
-
-    // </nav>
-
     <nav className={`navbar navbar-expand-lg  ${styles.nav}`}>
-      <div className="container-fluid mb-3">
+      <div className="container-fluid mb-4">
         <Logo />
         <button
           className={`navbar-toggler ${styles.hamburger}`}
