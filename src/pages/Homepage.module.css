@@ -46,14 +46,15 @@
     flex-direction: column;
     height: 85%;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: start;
+    gap: 3rem;
     text-align: center;
   }
 
   .homepage h1 {
     font-size: 2rem;
   }
+  
 
   .homepage h2 {
     font-size: 1.5rem;

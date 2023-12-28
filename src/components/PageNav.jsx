@@ -20,7 +20,7 @@ function PageNav() {
         </button>
         <div className="collapse navbar-collapse ms-md-auto" id="navbarNav">
           <ul className="navbar-nav ms-md-auto mb-2 mb-lg-0">
-            <li className="nav-item mt-sm-4 mt-md-0">
+            <li className={`nav-item ${styles.pricing}`}>
               <NavLink to={'/pricing'}>Pricing</NavLink>
             </li>
             <li className="nav-item ">

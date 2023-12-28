@@ -68,4 +68,7 @@ a.ctaLink:visited {
   a.ctaLink:link {
     padding: 0.4rem 1rem;
   }
+  .pricing {
+    margin-top: 1rem;
+  }
 }
