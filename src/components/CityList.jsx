@@ -1,10 +1,10 @@
-import {useContext} from 'react';
+import {UseCities} from '../context/CitiesContext';
 import CityItem from './CityItem';
 import styles from './CityList.module.css';
 import Message from './Message';
 
 function CityList() {
-  const {cities} = useContext();
+  const {cities} = UseCities();
 
   if (!cities.length)
     return <Message message={`No cities added, Click the map to add a city`} />;
