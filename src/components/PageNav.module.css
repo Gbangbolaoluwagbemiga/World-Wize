@@ -48,7 +48,7 @@ a.ctaLink:visited {
 
   .nav a:link,
   .nav a:visited {
-    font-size: 1rem;
+    font-size: 1.15rem;
   }
 
   a.ctaLink:link,
@@ -57,18 +57,18 @@ a.ctaLink:visited {
   }
 
   .hamburger {
-    font-size: 1rem;
+    font-size: 1.25rem;
     border: 2px solid white;
     background-color: white;
   }
   .hamburger:focus {
     outline: none;
-    box-shadow: 0 0 5px none;
+    box-shadow: 0 0 1px white;
   }
   a.ctaLink:link {
     padding: 0.4rem 1rem;
   }
   .pricing {
-    margin-top: 1rem;
+    margin-top: 1.1rem;
   }
 }
