@@ -37,8 +37,8 @@
 @media screen and (max-width: 567px) {
   .homepage {
     height: calc(95vh - 5rem);
-    margin: 1.5rem;
-    padding: 2rem;
+    margin: 1.25rem;
+    padding: 1.25rem;
   }
 
   .homepage section {
