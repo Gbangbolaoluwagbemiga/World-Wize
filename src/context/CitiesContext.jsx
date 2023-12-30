@@ -17,7 +17,6 @@ function CitiesProvider({children}) {
   function getCity(id) {
     const city = cities.find(el => el.id === id);
     setCurrentCity(city);
-    console.log(currentCity);
   }
 
   return (
