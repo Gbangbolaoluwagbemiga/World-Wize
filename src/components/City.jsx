@@ -4,21 +4,13 @@ import {UseCities} from '../context/CitiesContext';
 import {useEffect} from 'react';
 function City() {
   // TEMP DATA
-  // const currentCity = {
-  //   cityName: 'Lisbon',
-  //   emoji: '🇵🇹',
-  //   date: '2027-10-31T15:59:59.138Z',
-  //   notes: 'My favorite city so far!',
-  // };
+
   const {id} = useParams();
   const {getCity, currentCity} = UseCities();
-  // console.log(id);
 
   useEffect(
     function () {
-      console.log(id);
       getCity(Number(id));
-      console.log(currentCity);
     },
     [getCity]
   );
