@@ -5,7 +5,7 @@ const CitiesContext = createContext();
 
 function CitiesProvider({children}) {
   const [cities, setCities] = useState([]);
-  const [currentCity, setCurrentCity] = useState({});
+  const [currentCity, setCurrentCity] = useState('');
 
   const {Cities} = Data;
   // const [isLoading, setIsLoading] = useState(true);
@@ -14,9 +14,12 @@ function CitiesProvider({children}) {
     setCities(Cities);
   }, []);
 
+  // console.log(cities);
   function getCity(id) {
     const city = cities.find(el => el.id === id);
+    // console.log(city);
     setCurrentCity(city);
+    console.log(currentCity);
   }
 
   return (

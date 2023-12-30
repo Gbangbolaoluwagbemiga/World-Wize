@@ -12,13 +12,15 @@ function City() {
   // };
   const {id} = useParams();
   const {getCity, currentCity} = UseCities();
+  // console.log(id);
 
   useEffect(
     function () {
-      getCity(id);
+      console.log(id);
+      getCity(Number(id));
       console.log(currentCity);
     },
-    [id]
+    [getCity]
   );
 
   const {emoji, cityName, date, notes} = currentCity;
