@@ -45,3 +45,20 @@
   font-size: 1.6rem;
   color: var(--color-brand--1);
 }
+
+@media screen and (max-width: 567px) {
+  .city {
+    padding: 1.25rem;
+    max-height: 70%;
+    gap: 1.5rem;
+  }
+
+  .city h3 {
+    font-size: 1.5rem;
+    gap: 1rem;
+  }
+
+  .city h3 span {
+    font-size: 2rem;
+  }
+}
