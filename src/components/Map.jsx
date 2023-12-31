@@ -10,9 +10,9 @@ function Map() {
 
   return (
     <div className={styles.mapContainer} onClick={() => navigate('form')}>
-      <h1>Hello</h1>
+      {/* <h1>Hello</h1>
       <p>{lat}</p>
-      <p onClick={() => setSearchParams({lat: 245})}>{lng}</p>
+      <p onClick={() => setSearchParams({lat: 245})}>{lng}</p> */}
     </div>
   );
 }
