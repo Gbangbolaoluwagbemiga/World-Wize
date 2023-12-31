@@ -9,11 +9,16 @@ function Map() {
   const lat = searchParams.get('lat');
   const lng = searchParams.get('lng');
 
-  const position = [lat, lng];
+  // const position = [lng, lat];
 
   return (
     <div className={styles.mapContainer} onClick={() => navigate('form')}>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+      <MapContainer
+        center={position}
+        zoom={13}
+        scrollWheelZoom={false}
+        className={styles.map}
+      >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
