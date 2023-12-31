@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom';
 import styles from './City.module.css';
 import {UseCities} from '../context/CitiesContext';
 import {useEffect} from 'react';
+import ButtonBack from './ButtonBack';
 function City() {
   // TEMP DATA
 
@@ -49,7 +50,10 @@ function City() {
         </a>
       </div>
 
-      <div>{/* <ButtonBack /> */}</div>
+      <div>
+        {' '}
+        <ButtonBack />{' '}
+      </div>
     </div>
   );
 }
