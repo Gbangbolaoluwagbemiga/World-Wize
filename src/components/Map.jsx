@@ -1,7 +1,7 @@
 import {useNavigate, useParams, useSearchParams} from 'react-router-dom';
 import styles from './Map.module.css';
 import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {UseCities} from '../context/CitiesContext';
 
 function Map() {
@@ -11,6 +11,13 @@ function Map() {
   const [searchParams, setSearchParams] = useSearchParams();
   const lat = searchParams.get('lat');
   const lng = searchParams.get('lng');
+
+  useEffect(
+    function () {
+      setPosition([lat, lng]);
+    },
+    [lng, lat]
+  );
 
   return (
     <div className={styles.mapContainer} onClick={() => navigate('form')}>
