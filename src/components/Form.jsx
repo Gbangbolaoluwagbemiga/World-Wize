@@ -15,7 +15,6 @@ export function convertToEmoji(countryCode) {
 }
 
 const LOCATION_URL = 'https://api.bigdatacloud.net/data/reverse-geocode-client';
-// console.log(LOCATION_URL);
 
 function Form() {
   const [lat, lng] = useUrlPosition();
