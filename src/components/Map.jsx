@@ -1,6 +1,6 @@
 import {useNavigate, useParams, useSearchParams} from 'react-router-dom';
 import styles from './Map.module.css';
-import {MapContainer, Marker, Popup, TileLayer} from 'react-leaflet';
+import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet';
 import {useState} from 'react';
 import {UseCities} from '../context/CitiesContext';
 
@@ -37,6 +37,11 @@ function Map() {
       </MapContainer>
     </div>
   );
+}
+
+function ChangePosition({position}) {
+  useMap();
+  return null;
 }
 
 export default Map;
