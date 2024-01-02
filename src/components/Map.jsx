@@ -12,9 +12,11 @@ import {useEffect, useState} from 'react';
 import {UseCities} from '../context/CitiesContext';
 import Button from './Button';
 import {useGeolocation} from '../hooks/UseGeolocation';
+import {useUrlPosition} from '../hooks/useUrlPosition';
 
 function Map() {
   const {isLoading, userPosition, error, getPosition} = useGeolocation();
+  const [lat, lng] = useUrlPosition();
 
   const [position, setPosition] = useState([23, 1]);
   const {cities} = UseCities();
