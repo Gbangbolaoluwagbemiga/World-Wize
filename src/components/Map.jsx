@@ -15,7 +15,6 @@ import {useGeolocation} from '../hooks/UseGeolocation';
 
 function Map() {
   const {isLoading, userPosition, error, getPosition} = useGeolocation();
-  console.log(userPosition);
 
   const [position, setPosition] = useState([23, 1]);
   const {cities} = UseCities();
