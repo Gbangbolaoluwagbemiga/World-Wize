@@ -15,4 +15,8 @@
 }
 
 @media screen and (max-width: 567px) {
+  .cityList {
+    width: 100%;
+    padding: 0;
+  }
 }
