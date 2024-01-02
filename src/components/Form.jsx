@@ -24,25 +24,28 @@ function Form() {
   const [date, setDate] = useState(new Date());
   const [notes, setNotes] = useState('');
 
-  useEffect(function () {
-    async function fetchLocation() {
-      try {
-        setIsLoadingGeolocation(true);
-        const res = await fetch(
-          `${LOCATION_URL}?latitude=${lat}&longitude=${lng}"`
-        );
-        const data = await res.json();
-        console.log(data);
+  useEffect(
+    function () {
+      async function fetchLocation() {
+        try {
+          setIsLoadingGeolocation(true);
+          const res = await fetch(
+            `${LOCATION_URL}?latitude=${lat}&longitude=${lng}`
+          );
+          const data = await res.json();
+          console.log(data);
 
-        // setIsLoadingGeolocation(false);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setIsLoadingGeolocation(false);
+          // setIsLoadingGeolocation(false);
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setIsLoadingGeolocation(false);
+        }
       }
-    }
-    fetchLocation();
-  }, []);
+      fetchLocation();
+    },
+    [lat, lng]
+  );
 
   return (
     <form className={styles.form}>
