@@ -18,9 +18,6 @@ function Map() {
 
   const [position, setPosition] = useState([23, 1]);
   const {cities} = UseCities();
-  const [searchParams, setSearchParams] = useSearchParams();
-  const lat = searchParams.get('lat');
-  const lng = searchParams.get('lng');
 
   useEffect(
     function () {
