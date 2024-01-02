@@ -40,7 +40,7 @@ function Form() {
           // Guard clause for Somewhere that doesn't exist
           if (!data.countryCode && !data.countryCity)
             throw new Error(
-              `That doesn"t seem to be a city. Click somewhere please`
+              `That doesn"t seem to be a city. Click somewhere please!!`
             );
           setCityName(data.city || data.locality || '');
           setCountry(data.countryName);
@@ -58,7 +58,7 @@ function Form() {
     [lat, lng]
   );
 
-  if (geoCodingError) return <Message />;
+  if (geoCodingError) return <Message message={geoCodingError} />;
 
   return (
     <form className={styles.form}>

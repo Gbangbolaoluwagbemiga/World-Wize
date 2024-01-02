@@ -5,3 +5,10 @@
   margin: 2rem auto;
   font-weight: 600;
 }
+@media screen and (max-width: 567px) {
+  .message {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: 2rem auto;
+  }
+}
