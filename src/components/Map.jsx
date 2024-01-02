@@ -1,12 +1,18 @@
 import {useNavigate, useSearchParams} from 'react-router-dom';
 import styles from './Map.module.css';
-import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet';
+import {
+  MapContainer,
+  Marker,
+  Popup,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from 'react-leaflet';
 import {useEffect, useState} from 'react';
 import {UseCities} from '../context/CitiesContext';
 
 function Map() {
-  const navigate = useNavigate();
-  const [position, setPosition] = useState([49, 23]);
+  const [position, setPosition] = useState([23, 1]);
   const {cities} = UseCities();
   const [searchParams, setSearchParams] = useSearchParams();
   const lat = searchParams.get('lat');
@@ -20,7 +26,7 @@ function Map() {
   );
 
   return (
-    <div className={styles.mapContainer} onClick={() => navigate('form')}>
+    <div className={styles.mapContainer}>
       <MapContainer
         center={position}
         zoom={13}
@@ -31,6 +37,7 @@ function Map() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
         />
+
         {cities.map(city => (
           <Marker
             position={[city.position.lat, city.position.lng]}
@@ -43,6 +50,7 @@ function Map() {
         ))}
 
         <ChangePosition position={position} />
+        <HandleClicks />
       </MapContainer>
     </div>
   );
@@ -52,6 +60,11 @@ function ChangePosition({position}) {
   const map = useMap();
   map.setView(position);
   return null;
+}
+function HandleClicks() {
+  const navigate = useNavigate();
+
+  useMapEvents({click: e => navigate('form')});
 }
 
 export default Map;
