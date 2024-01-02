@@ -29,6 +29,13 @@ function Map() {
     [lng, lat]
   );
 
+  useEffect(
+    function () {
+      if (userPosition) setPosition([userPosition.lat, userPosition.lng]);
+    },
+    [userPosition]
+  );
+
   return (
     <div className={styles.mapContainer}>
       <Button type="position" onclick={getPosition}>
