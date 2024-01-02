@@ -19,3 +19,10 @@
     transform: rotate(1turn);
   }
 }
+
+@media screen and (max-width: 567px) {
+  .spinner {
+    width: 4rem;
+    height: 4rem;
+  }
+}
