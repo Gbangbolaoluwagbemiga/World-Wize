@@ -36,3 +36,10 @@
 :global(.leaflet-popup-content-wrapper) {
   border-left: 5px solid var(--color-brand--2);
 }
+
+@media screen and (max-width: 567px) {
+  .mapContainer {
+    height: 25rem;
+    margin: 1rem 0;
+  }
+}

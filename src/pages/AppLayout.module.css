@@ -4,12 +4,14 @@
   overscroll-behavior-y: none;
   display: flex;
   position: relative;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 @media screen and (max-width: 567px) {
   .app {
     padding: 1.25rem;
-    height: 40rem;
+    height: 100vh;
+    /* margin-bottom: 10.5rem; */
+    margin-top: 10.5rem;
   }
 }
