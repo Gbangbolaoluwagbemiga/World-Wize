@@ -27,7 +27,15 @@ function Form() {
   const [emoji, setEmoji] = useState('');
   const [geoCodingError, setGeoCodingError] = useState('');
 
-  const newCity = {};
+  const newCity = {
+    cityName,
+    country,
+    emoji,
+    date,
+    notes,
+    position: {lat, lng},
+    id: Math.random() * 20,
+  };
 
   useEffect(
     function () {
