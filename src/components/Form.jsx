@@ -27,6 +27,8 @@ function Form() {
   const [emoji, setEmoji] = useState('');
   const [geoCodingError, setGeoCodingError] = useState('');
 
+  const newCity = {};
+
   useEffect(
     function () {
       async function fetchLocation() {
