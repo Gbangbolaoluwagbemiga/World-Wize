@@ -19,12 +19,12 @@ function CitiesProvider({children}) {
     setCurrentCity(city);
   }
 
-  useEffect(function (newCity) {
+  function createCity(newCity) {
     setCities(prev => [...prev, newCity]);
-  }, []);
+  }
 
   return (
-    <CitiesContext.Provider value={{cities, getCity, currentCity}}>
+    <CitiesContext.Provider value={{cities, getCity, currentCity, createCity}}>
       {children}
     </CitiesContext.Provider>
   );
