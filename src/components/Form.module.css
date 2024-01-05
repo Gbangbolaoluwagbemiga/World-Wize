@@ -40,7 +40,7 @@
 
 :global(.react-datepicker) {
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width: 567px) {
@@ -48,7 +48,7 @@
     padding: 1rem;
   }
   .flag {
-    top: 4rem;
+    top: 3.5rem;
     font-size: 1.5rem;
   }
   .label,
