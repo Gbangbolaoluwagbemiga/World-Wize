@@ -53,6 +53,7 @@ function Form() {
   useEffect(
     function () {
       async function fetchLocation() {
+        if (!lat && !lng) return;
         try {
           setIsLoadingGeolocation(true);
           setGeoCodingError('');
@@ -82,6 +83,7 @@ function Form() {
   );
   if (isLoadingGeolocation) return <Spinner />;
   if (geoCodingError) return <Message message={geoCodingError} />;
+  if (!lat && !lng) return <Message message={`Start by clicking on the Map`} />;
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
