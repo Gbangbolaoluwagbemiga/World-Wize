@@ -90,6 +90,7 @@ function Form() {
           City name
         </label>
         <input
+          className={styles.input}
           id="cityName"
           onChange={e => setCityName(e.target.value)}
           value={cityName}
@@ -114,6 +115,7 @@ function Form() {
           Notes about your trip to {cityName}
         </label>
         <textarea
+          className={styles.textArea}
           id="notes"
           onChange={e => setNotes(e.target.value)}
           value={notes}
