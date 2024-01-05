@@ -47,7 +47,7 @@ function Form() {
     if (!cityName && !emoji) return;
     console.log(newCity);
     createCity(newCity);
-    navigate(-1);
+    navigate(`/appLayout/cities`);
   }
 
   useEffect(
