@@ -18,7 +18,7 @@ function Map() {
   const {isLoading, userPosition, error, getPosition} = useGeolocation();
   const [lat, lng] = useUrlPosition();
 
-  const [position, setPosition] = useState([23, 1]);
+  const [position, setPosition] = useState([46, 2]);
   const {cities} = UseCities();
 
   useEffect(

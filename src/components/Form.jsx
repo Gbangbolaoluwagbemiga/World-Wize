@@ -40,10 +40,10 @@ function Form() {
     date,
     notes,
     position: {lat, lng},
-    id: Math.floor(Math.random() * 2e9) + new Date().getTime(),
+    id: Math.floor(Math.random() * 2e9) + Math.floor(Math.random() * 3e9),
   };
 
-  function handleSubmit(e) {
+  function handleSubmit() {
     if (!cityName && !emoji) return;
     console.log(newCity);
     createCity(newCity);

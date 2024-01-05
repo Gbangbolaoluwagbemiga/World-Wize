@@ -23,8 +23,14 @@ function CitiesProvider({children}) {
     setCities(prev => [...prev, newCity]);
   }
 
+  function deleteCity(id) {
+    setCities(cities.filter(city => city.id !== id));
+  }
+
   return (
-    <CitiesContext.Provider value={{cities, getCity, currentCity, createCity}}>
+    <CitiesContext.Provider
+      value={{cities, getCity, deleteCity, currentCity, createCity}}
+    >
       {children}
     </CitiesContext.Provider>
   );

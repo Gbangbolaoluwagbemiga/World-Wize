@@ -39,7 +39,7 @@
 
 @media screen and (max-width: 567px) {
   .mapContainer {
-    height: 25rem;
+    height: 30rem;
     margin-bottom: 0.75rem;
   }
 }
