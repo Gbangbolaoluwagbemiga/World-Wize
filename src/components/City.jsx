@@ -15,8 +15,8 @@ function City() {
     },
     [getCity]
   );
-
   const {emoji, cityName, date, notes} = currentCity;
+  console.log(currentCity);
 
   return (
     <div className={styles.city}>
@@ -27,10 +27,10 @@ function City() {
         </h3>
       </div>
 
-      <div className={styles.row}>
+      {/* <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
         <p>{date || null}</p>
-      </div>
+      </div>*/}
 
       {notes && (
         <div className={styles.row}>
