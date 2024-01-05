@@ -7,6 +7,7 @@ import ButtonBack from './ButtonBack';
 import Message from './Message';
 import Spinner from './Spinner';
 import {UseCities} from '../context/CitiesContext';
+import ReactDatePicker from 'react-datepicker';
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -92,7 +93,8 @@ function Form() {
 
       <div className={styles.row}>
         <label htmlFor="date">When did you go to {cityName}?</label>
-        <input id="date" onChange={e => setDate(e.target.value)} value={date} />
+        {/* <input id="date" onChange={e => setDate(e.target.value)} value={date} /> */}
+        <ReactDatePicker />
       </div>
 
       <div className={styles.row}>

@@ -91,6 +91,6 @@ input:focus {
 @media screen and (max-width: 567px) {
   .sidebar {
     padding: 1.5rem 1rem;
-    height: 50rem;
+    height: 48rem;
   }
 }

@@ -29,6 +29,6 @@
 
 @media screen and (max-width: 567px) {
   .nav {
-    margin: 1rem;
+    margin: 1rem auto;
   }
 }
