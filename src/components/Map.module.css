@@ -40,6 +40,5 @@
 @media screen and (max-width: 567px) {
   .mapContainer {
     height: 25rem;
-    margin: 1rem 0;
   }
 }
