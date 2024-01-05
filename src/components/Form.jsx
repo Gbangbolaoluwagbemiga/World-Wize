@@ -9,6 +9,7 @@ import Message from './Message';
 import Spinner from './Spinner';
 import {UseCities} from '../context/CitiesContext';
 import ReactDatePicker from 'react-datepicker';
+import {useNavigate} from 'react-router-dom';
 
 export function convertToEmoji(countryCode) {
   const codePoints = countryCode
@@ -30,6 +31,7 @@ function Form() {
   const [notes, setNotes] = useState('');
   const [emoji, setEmoji] = useState('');
   const [geoCodingError, setGeoCodingError] = useState('');
+  const navigate = useNavigate();
 
   const newCity = {
     cityName,
@@ -38,13 +40,14 @@ function Form() {
     date,
     notes,
     position: {lat, lng},
-    id: Math.floor(Math.random() * 20),
+    id: Math.floor(Math.random() * 20) + new Date().getTime(),
   };
 
   function handleSubmit() {
     if (!cityName && !emoji) return;
     console.log(newCity);
     createCity(newCity);
+    navigate(-1);
   }
 
   useEffect(
@@ -83,7 +86,9 @@ function Form() {
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.row}>
-        <label htmlFor="cityName">City name</label>
+        <label className={styles.label} htmlFor="cityName">
+          City name
+        </label>
         <input
           id="cityName"
           onChange={e => setCityName(e.target.value)}
@@ -93,8 +98,9 @@ function Form() {
       </div>
 
       <div className={styles.row}>
-        <label htmlFor="date">When did you go to {cityName}?</label>
-        {/* <input id="date" onChange={e => setDate(e.target.value)} value={date} /> */}
+        <label className={styles.label} htmlFor="date">
+          When did you go to {cityName}?
+        </label>
         <ReactDatePicker
           id="date"
           onChange={date => setDate(date)}
@@ -104,7 +110,9 @@ function Form() {
       </div>
 
       <div className={styles.row}>
-        <label htmlFor="notes">Notes about your trip to {cityName}</label>
+        <label className={styles.label} htmlFor="notes">
+          Notes about your trip to {cityName}
+        </label>
         <textarea
           id="notes"
           onChange={e => setNotes(e.target.value)}
