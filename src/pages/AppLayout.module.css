@@ -10,6 +10,6 @@
 @media screen and (max-width: 567px) {
   .app {
     padding: 1.25rem;
-    height: calc(100vh + 7.5rem);
+    height: calc(100vh + 5rem);
   }
 }
