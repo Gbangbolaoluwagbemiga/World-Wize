@@ -30,6 +30,12 @@
   border-radius: 0.85rem;
   cursor: pointer;
 }
+.visibility {
+  position: relative;
+  font-size: 2rem;
+  right: -90%;
+  top: -4rem;
+}
 
 @media screen and (max-width: 567px) {
   .login {
@@ -41,5 +47,9 @@
     width: 100%;
     margin: 4rem 0;
     padding: 2rem;
+  }
+
+  .visibility {
+    right: -85%;
   }
 }
