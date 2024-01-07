@@ -4,8 +4,6 @@ import {UseCities} from '../context/CitiesContext';
 import {useEffect} from 'react';
 import ButtonBack from './ButtonBack';
 function City() {
-  // TEMP DATA
-
   const {id} = useParams();
   const {getCity, currentCity} = UseCities();
 
