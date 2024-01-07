@@ -25,7 +25,7 @@ function reducer(state, action) {
     case 'city/created':
       return {
         ...state,
-        cities: [...state, action.payload],
+        cities: [...state.cities, action.payload],
         currentCity: action.payload,
       };
 
@@ -37,7 +37,7 @@ function reducer(state, action) {
       };
 
     default:
-      return state;
+      throw new Error(`Error`);
   }
 }
 
