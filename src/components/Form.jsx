@@ -37,7 +37,7 @@ function Form() {
     cityName,
     country,
     emoji,
-    date,
+    date: date.toISOString(),
     notes,
     position: {lat, lng},
     id: Math.floor(Math.random() * 2e9) + Math.floor(Math.random() * 3e9),

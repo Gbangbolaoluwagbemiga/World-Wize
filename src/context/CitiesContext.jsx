@@ -39,7 +39,6 @@ function CitiesProvider({children}) {
   const [{cities, currentCity}, dispatch] = useReducer(reducer, initialState);
 
   const {Cities} = Data;
-  console.log(Cities);
 
   useEffect(function () {
     dispatch({type: 'city/loaded', payload: Cities});
