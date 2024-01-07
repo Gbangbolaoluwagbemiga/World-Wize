@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import styles from './Login.module.css';
 import PageNav from '../components/PageNav';
 import Button from '../components/Button';
@@ -8,9 +9,16 @@ export default function Login() {
   const [password, setPassword] = useState('');
 
   const [showPassword, setShowPassword] = useState(true);
+  const navigate = useNavigate();
 
   function togglePasswordVisibility() {
     setShowPassword(prev => !prev);
+  }
+
+  function handleUserDetails(e) {
+    if (!email || !password) return;
+    e.preventDefault();
+    navigate('/');
   }
 
   return (
@@ -26,6 +34,7 @@ export default function Login() {
             placeholder="philip@gmail.com"
             onChange={e => setEmail(e.target.value)}
             value={email}
+            required={true}
           />
         </div>
 
@@ -37,6 +46,7 @@ export default function Login() {
             id="password"
             onChange={e => setPassword(e.target.value)}
             value={password}
+            required={true}
           />
           <span
             className={styles.visibility}
@@ -47,8 +57,8 @@ export default function Login() {
         </div>
 
         <div>
-          <Button type={'primary'} onclick={() => console.log('HIII')}>
-            Login
+          <Button type={'primary'} onclick={handleUserDetails}>
+            Login{' '}
           </Button>
         </div>
       </form>
