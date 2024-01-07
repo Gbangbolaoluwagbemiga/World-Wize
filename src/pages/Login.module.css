@@ -32,6 +32,7 @@
 }
 .visibility {
   position: relative;
+  cursor: pointer;
   font-size: 2rem;
   right: -90%;
   top: -4rem;
