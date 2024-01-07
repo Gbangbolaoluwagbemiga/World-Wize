@@ -7,7 +7,6 @@ export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  // const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(true);
 
   function togglePasswordVisibility() {
@@ -48,7 +47,9 @@ export default function Login() {
         </div>
 
         <div>
-          <Button type={'primary'}>Login</Button>
+          <Button type={'primary'} onclick={() => console.log('HIII')}>
+            Login
+          </Button>
         </div>
       </form>
     </main>

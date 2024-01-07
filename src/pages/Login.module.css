@@ -36,6 +36,7 @@
   font-size: 2rem;
   right: -90%;
   top: -4rem;
+  height: 0.25rem;
 }
 
 @media screen and (max-width: 567px) {
