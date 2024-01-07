@@ -2,8 +2,15 @@ import {createContext, useContext, useReducer} from 'react';
 
 const AuthContext = createContext();
 
+const user = {
+  name: '',
+  email: '',
+  password: '',
+  avatar: 'https://i.pravatar.cc/100?u=zz',
+};
+
 const initialState = {
-  user: null,
+  user: user,
   isAuthenticated: false,
 };
 
@@ -17,13 +24,6 @@ function reducer(state, action) {
       throw new Error('Unknown action');
   }
 }
-
-const user = {
-  name: '',
-  email: '',
-  password: '',
-  avatar: 'https://i.pravatar.cc/100?u=zz',
-};
 
 function AuthProvider({children}) {
   const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
