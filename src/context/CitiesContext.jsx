@@ -42,32 +42,24 @@ function reducer(state, action) {
 }
 
 function CitiesProvider({children}) {
-  // const [cities, setCities] = useState([]);
-  // const [currentCity, setCurrentCity] = useState('');
-
   const [{cities, currentCity}, dispatch] = useReducer(reducer, initialState);
 
   const {Cities} = Data;
-  // const [isLoading, setIsLoading] = useState(true);
 
   useEffect(function () {
-    // setCities(Cities);
     dispatch({type: 'city/loaded', payload: Cities});
   }, []);
 
   function getCity(id) {
     const city = cities.find(el => el.id === id);
-    // setCurrentCity(city);
     dispatch({type: 'city/current', payload: city});
   }
 
   function createCity(newCity) {
-    // setCities(prev => [...prev, newCity]);
     dispatch({type: 'city/created', payload: newCity});
   }
 
   function deleteCity(id) {
-    // setCities(cities.filter(city => city.id !== id));
     dispatch({type: 'city/deleted', payload: id});
   }
 
