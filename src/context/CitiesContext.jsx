@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useReducer,
-  useState,
-} from 'react';
+import {createContext, useContext, useEffect, useReducer} from 'react';
 import Data from '../data/cities';
 
 const CitiesContext = createContext();
@@ -45,6 +39,7 @@ function CitiesProvider({children}) {
   const [{cities, currentCity}, dispatch] = useReducer(reducer, initialState);
 
   const {Cities} = Data;
+  console.log(Cities);
 
   useEffect(function () {
     dispatch({type: 'city/loaded', payload: Cities});
