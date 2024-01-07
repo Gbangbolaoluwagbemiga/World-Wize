@@ -1,6 +1,12 @@
 import {createContext, useContext} from 'react';
 
 const AuthContext = createContext();
+const user = {
+  name: 'Jack',
+  email: 'jack@example.com',
+  password: 'qwerty',
+  avatar: 'https://i.pravatar.cc/100?u=zz',
+};
 
 function AuthProvider({children}) {
   return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;

@@ -5,6 +5,7 @@ import PageNav from '../components/PageNav';
 import Button from '../components/Button';
 
 export default function Login() {
+  const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -16,7 +17,7 @@ export default function Login() {
   }
 
   function handleUserDetails(e) {
-    if (!email || !password) return;
+    if (!userName || !email || !password) return;
     e.preventDefault();
     navigate('/');
   }
@@ -26,6 +27,17 @@ export default function Login() {
       <PageNav />
 
       <form className={styles.form}>
+        <div className={styles.row}>
+          <label htmlFor="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            placeholder="philip@gmail.com"
+            onChange={e => setUserName(e.target.value)}
+            value={userName}
+            required={true}
+          />
+        </div>
         <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
