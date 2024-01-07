@@ -37,7 +37,7 @@ function reducer(state, action) {
       };
 
     default:
-      throw new Error(`Error`);
+      return state;
   }
 }
 
