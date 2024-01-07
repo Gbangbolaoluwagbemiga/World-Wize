@@ -1,10 +1,27 @@
 import {createContext, useContext} from 'react';
 
 const AuthContext = createContext();
+
+const initialState = {
+  user: null,
+  isAuthenticated: false,
+};
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'login':
+      return {...state, user: action.payload, isAuthenticated: true};
+    case 'logout':
+      return {...state, user: null, isAuthenticated: false};
+    default:
+      throw new Error('Unknown action');
+  }
+}
+
 const user = {
-  name: 'Jack',
-  email: 'jack@example.com',
-  password: 'qwerty',
+  name: '',
+  email: '',
+  password: '',
   avatar: 'https://i.pravatar.cc/100?u=zz',
 };
 
