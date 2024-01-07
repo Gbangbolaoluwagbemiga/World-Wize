@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import styles from './Login.module.css';
 import PageNav from '../components/PageNav';
+import Button from '../components/Button';
 
 export default function Login() {
   const [email, setEmail] = useState('jack@example.com');
@@ -32,7 +33,9 @@ export default function Login() {
         </div>
 
         <div>
-          <button className={styles.btn}>Login</button>
+          <Button type={'primary'}>Login</Button>
+
+          {/* <button className={styles.btn}></button> */}
         </div>
       </form>
     </main>
