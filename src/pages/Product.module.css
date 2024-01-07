@@ -38,6 +38,7 @@
   .product {
     margin: 1.5rem;
     padding: 2.5rem;
+    min-height: calc(100vh - 10rem);
   }
 
   .product section {
