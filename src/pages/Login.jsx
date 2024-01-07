@@ -32,20 +32,19 @@ export default function Login() {
 
         <div className={styles.row}>
           <label htmlFor="password">Password</label>
-          <div>
-            <input
-              type={showPassword ? 'password' : 'text'}
-              id="password"
-              onChange={e => setPassword(e.target.value)}
-              value={password}
-            />
-            <span
-              className={styles.visibility}
-              onClick={togglePasswordVisibility}
-            >
-              {showPassword ? '👁️' : <strike>👁️</strike>}
-            </span>
-          </div>
+
+          <input
+            type={showPassword ? 'password' : 'text'}
+            id="password"
+            onChange={e => setPassword(e.target.value)}
+            value={password}
+          />
+          <span
+            className={styles.visibility}
+            onClick={togglePasswordVisibility}
+          >
+            {showPassword ? '👁️' : <strike>👁️</strike>}
+          </span>
         </div>
 
         <div>
