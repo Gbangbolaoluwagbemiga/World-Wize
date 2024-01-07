@@ -1,9 +1,16 @@
+import {createContext, useContext} from 'react';
 
-const Auth
+const AuthContext = createContext();
 
-
-function AuthContext() {
-  return <div></div>;
+function AuthProvider({children}) {
+  return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
 }
 
-export default AuthContext;
+function useAuth() {
+  const context = useContext(AuthContext);
+  if (context === undefined)
+    throw new Error(`AuthContext was used outside AuthProvider `);
+  return context;
+}
+
+export {AuthProvider, useAuth};
