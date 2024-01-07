@@ -4,8 +4,15 @@ import PageNav from '../components/PageNav';
 import Button from '../components/Button';
 
 export default function Login() {
-  const [email, setEmail] = useState('jack@example.com');
-  const [password, setPassword] = useState('qwerty');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  // const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(true);
+
+  function togglePasswordVisibility() {
+    setShowPassword(prev => !prev);
+  }
 
   return (
     <main className={styles.login}>
@@ -17,6 +24,7 @@ export default function Login() {
           <input
             type="email"
             id="email"
+            placeholder="philip@gmail.com"
             onChange={e => setEmail(e.target.value)}
             value={email}
           />
@@ -25,17 +33,18 @@ export default function Login() {
         <div className={styles.row}>
           <label htmlFor="password">Password</label>
           <input
-            type="password"
+            type={showPassword ? 'password' : 'text'}
             id="password"
             onChange={e => setPassword(e.target.value)}
             value={password}
           />
+          <span className="toggle-password" onClick={togglePasswordVisibility}>
+            {showPassword ? '👁️' : <strike>👁️</strike>}
+          </span>
         </div>
 
         <div>
           <Button type={'primary'}>Login</Button>
-
-          {/* <button className={styles.btn}></button> */}
         </div>
       </form>
     </main>
