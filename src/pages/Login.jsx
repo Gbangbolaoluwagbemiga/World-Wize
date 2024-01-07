@@ -3,11 +3,13 @@ import {useNavigate} from 'react-router-dom';
 import styles from './Login.module.css';
 import PageNav from '../components/PageNav';
 import Button from '../components/Button';
+import {useAuth} from '../context/AuthContext';
 
 export default function Login() {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const {userLogin} = useAuth();
 
   const [showPassword, setShowPassword] = useState(true);
   const navigate = useNavigate();
@@ -19,6 +21,7 @@ export default function Login() {
   function handleUserDetails(e) {
     if (!userName || !email || !password) return;
     e.preventDefault();
+    userLogin({userName, email, password});
     navigate('/');
   }
 

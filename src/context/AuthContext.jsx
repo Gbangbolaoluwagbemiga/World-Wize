@@ -1,4 +1,4 @@
-import {createContext, useContext} from 'react';
+import {createContext, useContext, useReducer} from 'react';
 
 const AuthContext = createContext();
 
@@ -26,7 +26,16 @@ const user = {
 };
 
 function AuthProvider({children}) {
-  return <AuthContext.Provider value={{}}>{children}</AuthContext.Provider>;
+  const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
+
+  function userLogin(userDetails) {
+    dispatch({type: 'login', payload: userDetails});
+    console.log(user, isAuthenticated);
+  }
+
+  return (
+    <AuthContext.Provider value={{userLogin}}>{children}</AuthContext.Provider>
+  );
 }
 
 function useAuth() {
