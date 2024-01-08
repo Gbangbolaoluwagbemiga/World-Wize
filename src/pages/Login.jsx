@@ -19,8 +19,9 @@ export default function Login() {
   }
 
   function handleUserDetails(e) {
-    if (!userName || !email || !password) return;
+    if (!userName || !email || password.length >= 6) return;
     e.preventDefault();
+    console.log('HIII');
     userLogin({userName, email, password});
     navigate('/');
   }
@@ -61,6 +62,7 @@ export default function Login() {
             id="password"
             onChange={e => setPassword(e.target.value)}
             value={password}
+            minLength={6}
             required={true}
           />
           <span
