@@ -1,9 +1,9 @@
 import {useNavigate} from 'react-router-dom';
 
-function ProtectedRoute() {
+function ProtectedRoute({children}) {
   const navigate = useNavigate();
 
-  return <div></div>;
+  return <div>{children}</div>;
 }
 
 export default ProtectedRoute;
