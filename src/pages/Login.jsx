@@ -7,7 +7,6 @@ import {useAuth} from '../context/AuthContext';
 
 export default function Login() {
   const [userName, setUserName] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const avatar = 'https://i.pravatar.cc/100?u=zz';
   const {userLogin} = useAuth();
@@ -20,10 +19,10 @@ export default function Login() {
   }
 
   function handleUserDetails(e) {
-    if (!userName || !email || !password.length) return;
+    if (!userName || !password.length) return;
     e.preventDefault();
     console.log('HIII');
-    userLogin({userName, email, password, avatar});
+    userLogin({userName, password, avatar});
     navigate('/');
   }
 
@@ -37,13 +36,13 @@ export default function Login() {
           <input
             type="name"
             id="name"
-            placeholder="philip@gmail.com"
+            placeholder="williams philip"
             onChange={e => setUserName(e.target.value)}
             value={userName}
             required={true}
           />
         </div>
-        <div className={styles.row}>
+        {/* <div className={styles.row}>
           <label htmlFor="email">Email address</label>
           <input
             type="email"
@@ -53,7 +52,7 @@ export default function Login() {
             value={email}
             required={true}
           />
-        </div>
+        </div> */}
 
         <div className={styles.row}>
           <label htmlFor="password">Password</label>
