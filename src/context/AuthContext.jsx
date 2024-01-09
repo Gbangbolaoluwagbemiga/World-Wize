@@ -29,6 +29,7 @@ function AuthProvider({children}) {
   const [{user, isAuthenticated}, dispatch] = useReducer(reducer, initialState);
 
   console.log(user, isAuthenticated);
+
   function userLogin(userDetails) {
     if (!userDetails) return;
     dispatch({type: 'login', payload: userDetails});

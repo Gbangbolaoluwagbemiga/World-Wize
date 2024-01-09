@@ -21,8 +21,7 @@ export default function Login() {
   function handleUserDetails(e) {
     if (!userName || !password.length) return;
     e.preventDefault();
-    console.log('HIII');
-    userLogin({userName: userName.split(' '), password, avatar});
+    userLogin({userName: userName.toUpperCase().split(' '), password, avatar});
     navigate('/');
   }
 
