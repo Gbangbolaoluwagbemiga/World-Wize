@@ -1,17 +1,18 @@
 import {useAuth} from '../context/AuthContext';
 import styles from './User.module.css';
 
-const FAKE_USER = {
-  name: 'Jack',
-  email: 'jack@example.com',
-  password: 'qwerty',
-  avatar: 'https://i.pravatar.cc/100?u=zz',
-};
+// const FAKE_USER = {
+//   name: 'Jack',
+//   email: 'jack@example.com',
+//   password: 'qwerty',
+//   avatar: 'https://i.pravatar.cc/100?u=zz',
+// };
 
 function User() {
   const {user, logout} = useAuth();
   if (!user.name) return;
   const userDetails = user;
+  console.log(userDetails);
 
   function handleClick() {
     logout();

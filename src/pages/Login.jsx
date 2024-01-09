@@ -19,7 +19,7 @@ export default function Login() {
   }
 
   function handleUserDetails(e) {
-    if (!userName || !email || password.length >= 6) return;
+    if (!userName || !email || !password.length) return;
     e.preventDefault();
     console.log('HIII');
     userLogin({userName, email, password});
