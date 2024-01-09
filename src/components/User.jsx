@@ -1,25 +1,34 @@
+import {useEffect} from 'react';
 import {useAuth} from '../context/AuthContext';
 import styles from './User.module.css';
 
-// const FAKE_USER = {
-//   name: 'Jack',
-//   email: 'jack@example.com',
-//   password: 'qwerty',
-//   avatar: 'https://i.pravatar.cc/100?u=zz',
-// };
+const FAKE_USER = {
+  name: 'Jack',
+  email: 'jack@example.com',
+  password: 'qwerty',
+  avatar: 'https://i.pravatar.cc/100?u=zz',
+};
 
 function User() {
-  const {user, logout} = useAuth();
-  if (!user.name) return;
+  const {user, userLogout, isAuthenticated} = useAuth();
+
+  useEffect(
+    function () {
+      isAuthenticated;
+    },
+    [isAuthenticated]
+  );
   const userDetails = user;
-  console.log(userDetails);
+
+  console.log(userDetails, isAuthenticated);
 
   function handleClick() {
-    logout();
+    userLogout();
   }
+  if (!isAuthenticated) return;
 
   return (
-    <div className={styles.userDetails}>
+    <div className={styles.user}>
       <img src={userDetails.avatar} alt={userDetails.name} />
       <span>Welcome, {userDetails.name}</span>
       <button onClick={handleClick}>Logout</button>
