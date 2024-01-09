@@ -1,4 +1,5 @@
 import Map from '../components/Map';
+import User from '../components/User';
 import SideBar from '../components/sideBar';
 import styles from './AppLayout.module.css';
 import ProtectedRoute from './ProtectedRoute';
@@ -6,10 +7,9 @@ import ProtectedRoute from './ProtectedRoute';
 function AppLayout() {
   return (
     <div className={styles.app}>
-      <ProtectedRoute>
-        <SideBar />
-        <Map />
-      </ProtectedRoute>
+      <SideBar />
+      <Map />
+      <User />
     </div>
   );
 }

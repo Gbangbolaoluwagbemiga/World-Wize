@@ -1,21 +1,26 @@
-import styles from "./User.module.css";
+import {useAuth} from '../context/AuthContext';
+import styles from './User.module.css';
 
 const FAKE_USER = {
-  name: "Jack",
-  email: "jack@example.com",
-  password: "qwerty",
-  avatar: "https://i.pravatar.cc/100?u=zz",
+  name: 'Jack',
+  email: 'jack@example.com',
+  password: 'qwerty',
+  avatar: 'https://i.pravatar.cc/100?u=zz',
 };
 
 function User() {
-  const user = FAKE_USER;
+  const {user, logout} = useAuth();
+  if (!user.name) return;
+  const userDetails = user;
 
-  function handleClick() {}
+  function handleClick() {
+    logout();
+  }
 
   return (
-    <div className={styles.user}>
-      <img src={user.avatar} alt={user.name} />
-      <span>Welcome, {user.name}</span>
+    <div className={styles.userDetails}>
+      <img src={userDetails.avatar} alt={userDetails.name} />
+      <span>Welcome, {userDetails.name}</span>
       <button onClick={handleClick}>Logout</button>
     </div>
   );
