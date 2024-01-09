@@ -22,7 +22,7 @@ export default function Login() {
     if (!userName || !password.length) return;
     e.preventDefault();
     console.log('HIII');
-    userLogin({userName, password, avatar});
+    userLogin({userName: userName.split(' '), password, avatar});
     navigate('/');
   }
 
