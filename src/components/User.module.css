@@ -36,11 +36,14 @@
 @media screen and (max-width: 567px) {
   .user {
     top: 1rem;
-    right: 4.2rem;
+    right: 1rem;
+    left: 1rem;
+    width: 85%;
+    margin: 0 auto;
     padding: 0.5rem 1rem;
     font-size: 1.25rem;
 
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .user img {

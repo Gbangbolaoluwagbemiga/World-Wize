@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 import {useAuth} from '../context/AuthContext';
 import styles from './User.module.css';
+import {useNavigate} from 'react-router-dom';
 
 const FAKE_USER = {
   name: 'Jack',
@@ -11,20 +12,19 @@ const FAKE_USER = {
 
 function User() {
   const {user, userLogout, isAuthenticated} = useAuth();
+  const naviagte = useNavigate();
 
   useEffect(
     function () {
-      user;
-      isAuthenticated;
+      if (!isAuthenticated && !user.name) naviagte('/');
     },
     [isAuthenticated, user]
   );
   const userDetails = user;
 
-  console.log(userDetails, isAuthenticated);
-
   function handleClick() {
     userLogout();
+    naviagte('/');
   }
   if (!isAuthenticated) return;
 
