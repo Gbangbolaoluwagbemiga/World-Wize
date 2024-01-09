@@ -32,3 +32,24 @@
   text-transform: uppercase;
   cursor: pointer;
 }
+
+@media screen and (max-width: 567px) {
+  .user {
+    top: 1.5rem;
+    right: 4.2rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+
+    gap: 2rem;
+  }
+
+  .user img {
+    border-radius: 100px;
+    height: 3rem;
+  }
+
+  .user button {
+    padding: 0.6rem 0.75rem;
+    font-size: 1rem;
+  }
+}
