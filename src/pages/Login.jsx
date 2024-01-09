@@ -9,6 +9,7 @@ export default function Login() {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const avatar = 'https://i.pravatar.cc/100?u=zz';
   const {userLogin} = useAuth();
 
   const [showPassword, setShowPassword] = useState(true);
@@ -22,7 +23,7 @@ export default function Login() {
     if (!userName || !email || !password.length) return;
     e.preventDefault();
     console.log('HIII');
-    userLogin({userName, email, password});
+    userLogin({userName, email, password, avatar});
     navigate('/');
   }
 

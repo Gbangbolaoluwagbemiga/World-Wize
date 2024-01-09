@@ -14,9 +14,10 @@ function User() {
 
   useEffect(
     function () {
+      user;
       isAuthenticated;
     },
-    [isAuthenticated]
+    [isAuthenticated, user]
   );
   const userDetails = user;
 
@@ -30,7 +31,7 @@ function User() {
   return (
     <div className={styles.user}>
       <img src={userDetails.avatar} alt={userDetails.name} />
-      <span>Welcome, {userDetails.name}</span>
+      <span>Welcome, {userDetails.userName}</span>
       <button onClick={handleClick}>Logout</button>
     </div>
   );
