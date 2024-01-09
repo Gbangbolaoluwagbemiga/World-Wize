@@ -22,7 +22,7 @@ export default function Login() {
     if (!userName || !password.length) return;
     e.preventDefault();
     userLogin({userName: userName.toUpperCase().split(' '), password, avatar});
-    navigate('/');
+    navigate('/appLayout');
   }
 
   return (
