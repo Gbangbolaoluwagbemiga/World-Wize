@@ -35,15 +35,16 @@
 
 @media screen and (max-width: 567px) {
   .user {
-    top: 1.5rem;
+    top: 1rem;
     right: 4.2rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1.25rem;
 
     gap: 2rem;
   }
 
   .user img {
+    padding-top: 0.5rem;
     border-radius: 100px;
     height: 3rem;
   }
