@@ -43,6 +43,7 @@
   .login {
     margin: 1.5rem;
     padding: 2.5rem 1.5rem;
+    height: calc(100vh - 10rem);
   }
 
   .form {
@@ -52,9 +53,7 @@
   }
 
   .visibility {
-    position: absolute;
-    right: 0;
-    left: 75%;
-    top: 45%;
+    right: -85%;
+    height: 40%;
   }
 }
