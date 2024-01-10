@@ -23,8 +23,14 @@ function User() {
   const userDetails = user;
 
   function handleClick() {
-    userLogout();
-    naviagte('/');
+    const logOut = window.confirm('Are you sure you want to Logout?');
+
+    if (logOut) {
+      userLogout();
+      naviagte('/');
+    } else {
+      return;
+    }
   }
   if (!isAuthenticated) return;
 
