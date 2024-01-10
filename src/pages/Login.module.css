@@ -52,7 +52,9 @@
   }
 
   .visibility {
-    right: -85%;
-    height: 40%;
+    position: absolute;
+    right: 0;
+    left: 75%;
+    top: 45%;
   }
 }
