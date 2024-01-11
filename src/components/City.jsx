@@ -7,9 +7,12 @@ function City() {
   const {id} = useParams();
   const {getCity, currentCity} = UseCities();
 
-  useEffect(function () {
-    getCity(Number(id));
-  }, []);
+  useEffect(
+    function () {
+      getCity(Number(id));
+    },
+    [getCity]
+  );
   const {emoji, cityName, date, notes} = currentCity;
 
   return (

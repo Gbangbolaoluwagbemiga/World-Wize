@@ -1,4 +1,10 @@
-import {createContext, useContext, useEffect, useReducer} from 'react';
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useReducer,
+} from 'react';
 import Data from '../data/cities';
 
 const CitiesContext = createContext();
@@ -44,10 +50,13 @@ function CitiesProvider({children}) {
     dispatch({type: 'city/loaded', payload: Cities});
   }, []);
 
-  function getCity(id) {
-    const city = cities.find(el => el.id === id);
-    dispatch({type: 'city/current', payload: city});
-  }
+  const getCity = useCallback(
+    function getCity(id) {
+      const city = cities.find(el => el.id === id);
+      dispatch({type: 'city/current', payload: city});
+    },
+    [cities]
+  );
 
   function createCity(newCity) {
     dispatch({type: 'city/created', payload: newCity});
