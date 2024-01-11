@@ -45,7 +45,6 @@ function Form() {
 
   function handleSubmit() {
     if (!cityName && !emoji) return;
-    console.log(newCity);
     createCity(newCity);
     navigate(`/appLayout/cities`);
   }
