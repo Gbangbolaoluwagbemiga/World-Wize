@@ -6,11 +6,13 @@ import ProtectedRoute from './ProtectedRoute';
 
 function AppLayout() {
   return (
-    <div className={styles.app}>
-      <SideBar />
-      <Map />
-      <User />
-    </div>
+    <ProtectedRoute>
+      <div className={styles.app}>
+        <SideBar />
+        <Map />
+        <User />
+      </div>
+    </ProtectedRoute>
   );
 }
 
