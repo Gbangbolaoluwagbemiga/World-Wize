@@ -12,17 +12,28 @@ export default function Product() {
           alt="person with dog overlooking mountain with sunset"
         />
         <div>
-          <h2>About WorldWide.</h2>
+          <h2>About WorldWise.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo est
-            dicta illum vero culpa cum quaerat architecto sapiente eius non
-            soluta, molestiae nihil laborum, placeat debitis, laboriosam at fuga
-            perspiciatis?
+            Welcome to WorldWise – the ultimate companion for avid travelers
+            like yourself! Unleash the full potential of your wanderlust and
+            transform your adventures into unforgettable memories with our
+            feature-packed travel companion.
           </p>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            doloribus libero sunt expedita ratione iusto, magni, id sapiente
-            sequi officiis et.
+            Features: Interactive World Map: Embark on a journey of
+            self-discovery as you visualize your travels on an interactive world
+            map. Pin every city you've explored and watch your personal
+            travelogue unfold with each click. Detailed City Statistics: Dive
+            deep into the heart of every destination. WorldWise provides
+            comprehensive statistics for each city you've visited, offering
+            insights into your travel habits and creating a personalized diary
+            of your globetrotting escapades. Effortless Tracking: Seamlessly
+            track your journey with our user-friendly interface. Mark the cities
+            you've conquered, reminisce about your favorite moments, and share
+            your travel stories with friends and family. Mobile Accessibility:
+            Carry your travel memories in your pocket! WorldWise is optimized
+            for mobile devices, allowing you to check your stats and explore new
+            destinations on the go.{' '}
           </p>
         </div>
       </section>

@@ -13,9 +13,9 @@ export default function Product() {
             Just $9/month.
           </h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+            Gain access to a world of premium features for just $9 a month. Your
+            subscription opens up a treasure trove of tools designed to enhance
+            your travel tracking experience.
           </p>
         </div>
         <img
